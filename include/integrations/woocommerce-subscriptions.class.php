@@ -10,7 +10,7 @@ class Woocommerce_Subscriptions extends Integration {
 		
 		add_action('woocommerce_subscription_payment_complete', [$this, 'subscription_payment_complete'], 10, 1);
 		//add_action('woocommerce_subscription_renewal_payment_complete', [$this, 'subscription_payment_complete'], -1, 2);
-		add_action('affilinet_payment_description', 			[$this, 'payment_description'], 10, 2);
+		add_action('affilinet-payment-description', 			[$this, 'payment_description'], 10, 2);
 		
 		add_action('init', [$this, 'init']);
 		

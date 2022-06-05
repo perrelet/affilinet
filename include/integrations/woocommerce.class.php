@@ -124,7 +124,7 @@ class Woocommerce extends Integration {
 		foreach ($items as $item) $description[] = $item->get_quantity() . " x " . $item->get_name();
 		
 		$description = implode(", ", $description);
-		$description = apply_filters('affilinet_payment_description', $description, $order_id);
+		$description = apply_filters('affilinet-payment-description', $description, $order_id);
 		$description = Affilinet()->get_option('campaign') . ": " . $description;
 
 		//SUBSCRIPTIONS
